@@ -1,0 +1,23 @@
+{
+  "name": "liri-node-app",
+  "version": "1.0.0",
+  "description": "This is a language recognition system that will take text input and return relevant information from several different APIs.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonvictory/liri-node-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jonvictory/liri-node-app/issues"
+  },
+  "homepage": "https://github.com/jonvictory/liri-node-app#readme",
+  "dependencies": {
+    "spotify": "^0.3.0"
+  }
+}
