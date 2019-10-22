@@ -90,6 +90,51 @@ switch (action) {
       });
     break;
   case "movie-this":
+
+      //* Title of the movie.
+      //* Year the movie came out.
+      //* IMDB Rating of the movie.
+      //* Rotten Tomatoes Rating of the movie.
+      //* Country where the movie was produced.
+      //* Language of the movie.
+      //* Plot of the movie.
+      //* Actors in the movie.
+
+      var queryUrl = "http://www.omdbapi.com/?t=" + input + "&y=&plot=short&apikey=trilogy";
+      console.log(queryUrl);
+      
+      axios.get(queryUrl).then(
+        function(response) {
+          console.log(response)
+          console.log (response.data.Title)
+          console.log("Release Year: " + response.data.Year);
+          console.log(response.data.imdbRating)
+          console.log(response.data.Ratings)
+          console.log(response.data.Ratings[1])
+          console.log(response.data.Country)
+          console.log(response.data.Language)
+          console.log(response.data.Plot)
+          console.log(response.data.Actors)
+        })
+        .catch(function(error) {
+          if (error.response) {
+          
+            console.log("---------------Data---------------");
+            console.log(error.response.data);
+            console.log("---------------Status---------------");
+            console.log(error.response.status);
+            console.log("---------------Status---------------");
+            console.log(error.response.headers);
+          } else if (error.request) {
+           
+            console.log(error.request);
+          } else {
+           
+            console.log("Error", error.message);
+          }
+          console.log(error.config);
+        });
+      
     break;
   case "do-what-it-says":
     break;
