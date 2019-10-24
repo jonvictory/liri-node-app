@@ -37,6 +37,7 @@ switch (action) {
           console.log('You can see this show in: ' + response.data[0].venue.city+', '+response.data[0].venue.country)
           var day = moment(response.data[0].datetime).format("MM/DD/YYYY")
           console.log('This show is taking place on: ' + day)
+          
         })
         .catch(function (error) {
           if (error.response) {
